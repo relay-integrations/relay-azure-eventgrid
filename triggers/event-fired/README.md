@@ -3,7 +3,7 @@
 This trigger passes through events fired from Azure EventGrid. 
 
 The payload will be wrapped in a map called `webhook_contents` and needs 
-to be unwrapped at the step level in order touse it; see the example below.
+to be unwrapped at the step level in order to use it; see the example below.
 
 ## Example Usage
 
