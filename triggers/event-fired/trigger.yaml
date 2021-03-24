@@ -1,0 +1,36 @@
+apiVersion: integration/v1
+kind: Trigger
+name: azure-eventgrid-trigger-event-fired
+version: 1
+summary: Azure EventGrid event fired
+
+description: |
+  This trigger takes in the contents of a Azure EventGrid event and presents it as an output event.
+
+responders:
+- webhook
+
+schemas:
+  event:
+    source: file
+    file: event.schema.json
+
+examples:
+- summary: When a Azure EventGrid event fires
+  content:
+    apiVersion: v1
+    kind: Trigger
+    name: azure-eventgrid-event
+    source:
+      type: webhook
+      image: relaysh/azure-eventgrid-trigger-event-fired
+    binding:
+      parameters:
+        webhook_contents: !Data webhook_contents
+
+build:
+  apiVersion: build/v1
+  kind: Docker
+
+publish:
+  repository: relaysh/azure-eventgrid-trigger-event-fired
