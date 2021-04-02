@@ -4,8 +4,7 @@ name: azure-eventgrid-trigger-event-fired
 version: 1
 summary: Azure EventGrid event fired
 
-description: |
-  This trigger takes in the contents of a Azure EventGrid event and presents it as an output event.
+description: Triggers from an Azure Event Grid web hook event.
 
 responders:
 - webhook
