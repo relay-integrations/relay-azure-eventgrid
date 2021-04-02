@@ -5,6 +5,10 @@ This trigger passes through events fired from Azure EventGrid.
 The payload will be wrapped in a map called `webhook_contents` and needs 
 to be unwrapped at the step level in order to use it; see the example below.
 
+## Azure Configuration
+
+You'll need to create an Azure Event Grid [Event Subscription](https://docs.microsoft.com/en-us/azure/event-grid/concepts#event-subscriptions) for the Event Grid "System Topic" you want to start receiving events from. When configuring the Event Subscription, select "Web Hook" and paste the webhook provided by Relay into the Subscriber Endpoint field.  
+
 ## Example Usage
 
 ```yaml
