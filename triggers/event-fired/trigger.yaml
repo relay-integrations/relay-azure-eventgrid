@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Trigger
-name: azure-eventgrid-trigger-event-fired
+name: event-fired
 version: 1
 summary: Azure EventGrid event fired
 
